@@ -7,107 +7,107 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: 'Inter', sans-serif; background-color: #fdfaf5; color: #333; }
+        body { font-family: 'Inter', sans-serif; background-color: #fdfaf5; color: #333; padding-top: 80px; } /* Espacio para que el menú no tape el inicio */
         .hero-bg {
             background: linear-gradient(rgba(253, 250, 245, 0.7), rgba(253, 250, 245, 0.7)), 
-                        url('TU_IMAGEN_HERO.jpg'); /* Reemplaza con tu foto de fondo */
+                        url('TU_IMAGEN_HERO.jpg'); 
             background-size: cover; background-position: center;
         }
         .btn-orange { background-color: #f2994a; color: white; transition: 0.3s; }
         .btn-orange:hover { background-color: #e08836; transform: translateY(-2px); }
         .card-shadow { box-shadow: 0 10px 30px rgba(0,0,0,0.03); }
         .orange-gradient { background: linear-gradient(135deg, #f6ad55 0%, #ed8936 100%); }
+        
+        /* Estilo para el menú fijo */
+        .sticky-nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 50;
+            background-color: rgba(253, 250, 245, 0.95);
+            backdrop-filter: blur(8px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
+        }
     </style>
 </head>
 <body>
 
-    <nav class="flex justify-between items-center p-6 max-w-7xl mx-auto">
-        <div class="flex items-center gap-2">
-            <div class="bg-[#ece6da] p-2 rounded-lg font-bold text-xs text-[#2d241e]">DaiN</div>
-            <span class="text-xl font-bold text-[#2d241e]">DaiN</span>
+    <nav class="sticky-nav">
+        <div class="flex justify-between items-center p-4 md:p-6 max-w-7xl mx-auto">
+            <div class="flex items-center gap-2">
+                <div class="bg-[#ece6da] p-2 rounded-lg font-bold text-xs text-[#2d241e]">DaiN</div>
+                <span class="text-xl font-bold text-[#2d241e]">DaiN</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
+                <a href="#" class="hover:text-orange-500 transition">Inicio</a>
+                <a href="#productos" class="hover:text-orange-500 transition">Productos</a>
+                <a href="#como-funciona" class="hover:text-orange-500 transition">Cómo Funciona</a>
+                <a href="#contacto" class="hover:text-orange-500 transition">Contacto</a>
+            </div>
+            <button class="btn-orange px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-orange-200">Cotizar</button>
         </div>
-        <div class="hidden md:flex space-x-8 text-sm font-medium text-gray-600">
-            <a href="#" class="hover:text-orange-500">Inicio</a>
-            <a href="#productos" class="hover:text-orange-500">Productos</a>
-            <a href="#como-funciona" class="hover:text-orange-500">Cómo Funciona</a>
-            <a href="#" class="hover:text-orange-500">Contacto</a>
-        </div>
-        <button class="btn-orange px-6 py-2 rounded-full text-sm font-bold shadow-lg shadow-orange-200">Cotizar</button>
     </nav>
 
     <header class="hero-bg min-h-[85vh] flex flex-col items-center justify-center text-center px-4">
-        <span class="text-[10px] uppercase tracking-[0.2em] text-orange-500 font-bold mb-4 bg-orange-50 px-3 py-1 rounded-full">Tazas únicas y personalizadas</span>
+        <span class="text-[10px] uppercase tracking-[0.2em] text-orange-500 font-bold mb-4 bg-orange-50 px-3 py-1 rounded-full text-center">Tazas únicas y personalizadas</span>
         <h1 class="text-5xl md:text-7xl font-bold mb-6 text-[#2d241e]">Regala un detalle <br><span class="text-orange-400">especial</span> ❤️</h1>
         <p class="max-w-xl text-gray-500 leading-relaxed mb-10 text-lg">Creamos tazas personalizadas con diseños únicos. Desde tazas mágicas hasta ilustraciones personalizadas.</p>
         <div class="flex flex-col md:flex-row gap-4">
             <a href="#productos" class="btn-orange px-10 py-4 rounded-xl font-bold text-lg">Ver Catálogo →</a>
-            <a href="#como-funciona" class="border-2 border-orange-400 text-orange-500 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition">¿Cómo funciona?</a>
+            <a href="#como-funciona" class="border-2 border-orange-400 text-orange-500 px-10 py-4 rounded-xl font-bold text-lg hover:bg-orange-50 transition text-center">¿Cómo funciona?</a>
         </div>
     </header>
 
     <section id="productos" class="py-24 max-w-7xl mx-auto px-6 text-center">
         <span class="text-orange-500 font-bold text-xs uppercase tracking-widest bg-orange-50 px-3 py-1 rounded-full">Nuestros Productos</span>
         <h2 class="text-4xl md:text-5xl font-bold mt-4 mb-4 text-[#2d241e]">Tazas para cada <span class="text-orange-400">ocasión</span></h2>
-        <p class="text-gray-500 mb-16 max-w-2xl mx-auto text-sm">Encuentra el regalo perfecto o date un capricho con nuestras tazas artesanales únicas.</p>
-        
-        <div class="grid md:grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-3 gap-10 mt-16">
             <div class="bg-white p-5 rounded-[2.5rem] card-shadow">
-                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden">
-                    <img src="Magica.jpg" class="w-full h-full object-cover"> </div>
+                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden"><img src="Magica.jpg" class="w-full h-full object-cover"></div>
                 <h3 class="font-bold text-xl mb-2 text-[#2d241e]">Tazas Mágicas</h3>
-                <p class="text-gray-500 text-xs px-4">Tazas que cambian de color con el calor. ¡La imagen aparece mágicamente!</p>
+                <p class="text-gray-500 text-xs px-4">Tazas que cambian de color con el calor.</p>
+            </div>
+            <div class="bg-white p-5 rounded-[2.5rem] card-shadow text-[#2d241e]">
+                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden"><img src="Personalizada.png" class="w-full h-full object-cover"></div>
+                <h3 class="font-bold text-xl mb-2 text-[#2d241e]">Diseños Propios</h3>
+                <p class="text-gray-500 text-xs px-4">Diseños exclusivos de temporada.</p>
             </div>
             <div class="bg-white p-5 rounded-[2.5rem] card-shadow">
-                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden text-[#2d241e]">
-                    <img src="Personalizada.png" class="w-full h-full object-cover">
-                </div>
-                <h3 class="font-bold text-xl mb-2 text-[#2d241e]">Diseños Personalizados</h3>
-                <p class="text-gray-500 text-xs px-4">Elige entre nuestros diseños exclusivos: Día de muertos, Harry Potter y más.</p>
-            </div>
-            <div class="bg-white p-5 rounded-[2.5rem] card-shadow">
-                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden">
-                    <img src="Nombre.png" class="w-full h-full object-cover">
-                </div>
+                <div class="h-64 bg-gray-100 rounded-[2rem] mb-6 overflow-hidden"><img src=Nombre.png" class="w-full h-full object-cover"></div>
                 <h3 class="font-bold text-xl mb-2 text-[#2d241e]">Con Tu Nombre</h3>
-                <p class="text-gray-500 text-xs px-4">Personalizamos cualquier taza con el nombre y diseño que quieras.</p>
+                <p class="text-gray-500 text-xs px-4">Personalización total para regalo.</p>
             </div>
-        </div>
-        <div class="mt-12 text-sm text-gray-400 font-medium">
-            ¿Tienes una idea diferente? ¡Cuéntanos!<br>
-            <a href="https://instagram.com/dain__oficial" class="text-orange-400 mt-2 inline-block">Ver más en Instagram →</a>
         </div>
     </section>
 
     <section id="como-funciona" class="py-24 bg-[#fdfaf5]">
         <div class="max-w-7xl mx-auto px-6 text-center">
-            <span class="text-teal-500 font-bold text-[10px] uppercase tracking-widest bg-teal-50 px-3 py-1 rounded-full">Proceso Simple</span>
-            <h2 class="text-4xl font-bold mt-4 mb-2 text-[#2d241e]">¿Cómo <span class="text-orange-400">funciona</span>?</h2>
-            <p class="text-gray-400 text-xs mb-16">En solo 4 pasos tendrás tu taza personalizada lista.</p>
-            
+            <h2 class="text-4xl font-bold mb-16 text-[#2d241e]">¿Cómo <span class="text-orange-400">funciona</span>?</h2>
             <div class="grid md:grid-cols-4 gap-6">
                 <div class="bg-white p-8 rounded-3xl card-shadow relative">
                     <span class="absolute top-4 right-4 bg-orange-400 text-white w-6 h-6 rounded-full text-[10px] flex items-center justify-center font-bold">1</span>
                     <div class="text-2xl mb-4 text-orange-300 text-left">💬</div>
-                    <h4 class="font-bold mb-2 text-sm text-left">Cuéntanos tu idea</h4>
-                    <p class="text-[10px] text-gray-400 text-left leading-relaxed">Escríbenos por Instagram o WhatsApp con el diseño que tienes en mente. ¡No hay límites!</p>
+                    <h4 class="font-bold mb-2 text-sm text-left">Idea</h4>
+                    <p class="text-[10px] text-gray-400 text-left">Escríbenos por Instagram o WhatsApp.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl card-shadow relative">
                     <span class="absolute top-4 right-4 bg-orange-400 text-white w-6 h-6 rounded-full text-[10px] flex items-center justify-center font-bold">2</span>
                     <div class="text-2xl mb-4 text-orange-300 text-left">🎨</div>
-                    <h4 class="font-bold mb-2 text-sm text-left">Diseñamos juntos</h4>
-                    <p class="text-[10px] text-gray-400 text-left leading-relaxed">Creamos el diseño perfecto para ti. Te enviamos una vista previa para que lo apruebes.</p>
+                    <h4 class="font-bold mb-2 text-sm text-left">Diseño</h4>
+                    <p class="text-[10px] text-gray-400 text-left">Te enviamos una vista previa.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl card-shadow relative">
                     <span class="absolute top-4 right-4 bg-orange-400 text-white w-6 h-6 rounded-full text-[10px] flex items-center justify-center font-bold">3</span>
                     <div class="text-2xl mb-4 text-orange-300 text-left">⚙️</div>
-                    <h4 class="font-bold mb-2 text-sm text-left">Producción artesanal</h4>
-                    <p class="text-[10px] text-gray-400 text-left leading-relaxed">Imprimimos tu taza con materiales de alta calidad que duran para siempre.</p>
+                    <h4 class="font-bold mb-2 text-sm text-left">Calidad</h4>
+                    <p class="text-[10px] text-gray-400 text-left">Imprimimos con alta duración.</p>
                 </div>
                 <div class="bg-white p-8 rounded-3xl card-shadow relative">
                     <span class="absolute top-4 right-4 bg-orange-400 text-white w-6 h-6 rounded-full text-[10px] flex items-center justify-center font-bold">4</span>
                     <div class="text-2xl mb-4 text-orange-300 text-left">📦</div>
-                    <h4 class="font-bold mb-2 text-sm text-left">Entrega segura</h4>
-                    <p class="text-[10px] text-gray-400 text-left leading-relaxed">Empacamos con cuidado y te enviamos tu pedido. ¡Listo para regalar o disfrutar!</p>
+                    <h4 class="font-bold mb-2 text-sm text-left">Entrega</h4>
+                    <p class="text-[10px] text-gray-400 text-left">Envío seguro a tus manos.</p>
                 </div>
             </div>
         </div>
@@ -115,49 +115,35 @@
 
     <section class="py-10 px-6">
         <div class="max-w-4xl mx-auto orange-gradient rounded-[2.5rem] p-12 text-center text-white shadow-xl">
-            <div class="text-2xl mb-4">🤍</div>
-            <h2 class="text-3xl md:text-4xl font-bold mb-4">¿Listo para crear algo especial?</h2>
-            <p class="mb-10 text-white/90 text-sm max-w-md mx-auto">Escríbenos y cuéntanos tu idea. Estaremos felices de ayudarte a crear el regalo perfecto.</p>
+            <h2 class="text-3xl font-bold mb-4">¿Listo para crear algo especial?</h2>
+            <p class="mb-10 text-white/90 text-sm max-w-md mx-auto">Escríbenos y cuéntanos tu idea. Estaremos felices de ayudarte.</p>
             <div class="flex flex-col md:flex-row justify-center gap-4">
-                <a href="https://instagram.com/dain__oficial" target="_blank" class="bg-white text-orange-500 px-8 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 hover:bg-orange-50 transition">
-                    📸 Síguenos en Instagram
-                </a>
-                <button class="bg-transparent border border-white/50 px-8 py-3 rounded-xl font-bold text-xs flex items-center justify-center gap-2 hover:bg-white/10 transition">
-                    💬 Enviar Mensaje
-                </button>
+                <a href="https://instagram.com/dain__oficial" target="_blank" class="bg-white text-orange-500 px-8 py-3 rounded-xl font-bold text-xs hover:bg-orange-50 transition text-center">📸 Instagram</a>
+                <button class="bg-transparent border border-white/50 px-8 py-3 rounded-xl font-bold text-xs hover:bg-white/10 transition">💬 WhatsApp</button>
             </div>
         </div>
     </section>
 
-    <footer class="pb-20">
+    <footer id="contacto" class="pb-20 pt-10">
         <div class="max-w-5xl mx-auto px-6">
             <div class="grid md:grid-cols-2 gap-6 mb-16">
-                <div class="bg-white p-10 rounded-[2rem] card-shadow text-center">
+                <div class="bg-white p-10 rounded-[2rem] card-shadow text-center border border-gray-50">
                     <div class="text-orange-400 text-2xl mb-4 flex justify-center">🚀</div>
                     <h4 class="font-bold mb-2 text-[#2d241e]">Respuesta rápida</h4>
-                    <p class="text-gray-400 text-xs">Te respondemos en menos de 24 horas</p>
+                    <p class="text-gray-400 text-xs">Menos de 24 horas</p>
                 </div>
-                <div class="bg-white p-10 rounded-[2rem] card-shadow text-center">
+                <div class="bg-white p-10 rounded-[2rem] card-shadow text-center border border-gray-50">
                     <div class="text-orange-400 text-2xl mb-4 flex justify-center">❤️</div>
                     <h4 class="font-bold mb-2 text-[#2d241e]">Hecho con amor</h4>
-                    <p class="text-gray-400 text-xs">Cada taza es única y especial</p>
+                    <p class="text-gray-400 text-xs">Detalles únicos</p>
                 </div>
             </div>
-
             <div class="flex flex-col md:flex-row justify-between items-center gap-6 pt-8 border-t border-gray-100">
-                <div class="flex items-center gap-2">
-                    <div class="bg-[#ece6da] p-2 rounded-lg font-bold text-[10px] text-[#2d241e]">DaiN</div>
-                    <div class="text-left">
-                        <p class="font-bold text-xs text-[#2d241e]">DaiN</p>
-                        <p class="text-[9px] text-gray-400 uppercase tracking-tighter">Tazas personalizadas</p>
-                    </div>
+                <div class="flex items-center gap-2 text-left">
+                    <div class="bg-[#ece6da] p-2 rounded-lg font-bold text-[10px]">DaiN</div>
+                    <div><p class="font-bold text-xs">DaiN</p><p class="text-[9px] text-gray-400">México</p></div>
                 </div>
-                <div class="flex items-center gap-2 text-xs font-medium text-gray-500">
-                    <span>📸</span> <a href="https://instagram.com/dain__oficial" target="_blank">@dain__oficial</a>
-                </div>
-                <div class="text-[10px] text-gray-300">
-                    Hecho con ❤️ en México
-                </div>
+                <div class="text-[10px] text-gray-300">© 2024 DaiN Tazas</div>
             </div>
         </div>
     </footer>
