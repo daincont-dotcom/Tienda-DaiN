@@ -4,13 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Catálogo DaiN - Tazas Personalizadas</title>
-    
     <link rel="icon" href="https://fav.farm/☕">
-
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/css/glightbox.min.css">
 
     <style>
         body { font-family: 'Inter', sans-serif; background-color: #fdfaf5; color: #333; overflow-x: hidden; }
@@ -20,10 +19,10 @@
             background-color: rgba(253, 250, 245, 0.95); backdrop-filter: blur(8px);
             border-bottom: 1px solid rgba(0,0,0,0.05);
         }
-        .category-title {
-            border-left: 5px solid #f2994a;
-            padding-left: 15px;
-        }
+        .category-title { border-left: 5px solid #f2994a; padding-left: 15px; }
+        /* Efecto de lupa al pasar el mouse */
+        .zoom-img { transition: transform 0.5s ease; cursor: zoom-in; }
+        .zoom-img:hover { transform: scale(1.1); }
     </style>
 </head>
 <body class="pt-24">
@@ -39,65 +38,62 @@
 
     <header class="max-w-7xl mx-auto px-6 pt-12 text-center" data-aos="fade-down">
         <h1 class="text-4xl md:text-5xl font-bold text-[#2d241e] mb-4">Nuestro <span class="text-orange-400">Catálogo</span></h1>
-        <p class="text-gray-500 max-w-lg mx-auto">Explora todos nuestros diseños. Cada taza es hecha con dedicación para ser el regalo perfecto.</p>
+        <p class="text-sm text-gray-400">Toca cualquier imagen para verla en grande ✨</p>
     </header>
 
     <main class="max-w-7xl mx-auto px-6 pb-24">
-
-        <h2 class="category-title text-2xl font-bold mt-16 mb-8 text-[#2d241e]" data-aos="fade-right">Colección General</h2>
         
+        <h2 class="category-title text-2xl font-bold mt-16 mb-8 text-[#2d241e]" data-aos="fade-right">Colección General</h2>
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-white p-4 rounded-[2rem] card-shadow" data-aos="fade-up">
+            
+            <a href="Magica.jpg" class="glightbox bg-white p-4 rounded-[2rem] card-shadow block overflow-hidden" data-aos="fade-up">
                 <div class="h-48 bg-gray-100 rounded-2xl mb-4 overflow-hidden">
-                    <img src="Magica.jpg" class="w-full h-full object-cover" alt="Taza Mágica">
+                    <img src="Magica.jpg" class="w-full h-full object-cover zoom-img">
                 </div>
                 <p class="font-bold text-sm text-center">Taza Mágica</p>
-            </div>
+            </a>
 
-            <div class="bg-white p-4 rounded-[2rem] card-shadow" data-aos="fade-up" data-aos-delay="100">
+            <a href="Personalizada.png" class="glightbox bg-white p-4 rounded-[2rem] card-shadow block overflow-hidden" data-aos="fade-up" data-aos-delay="100">
                 <div class="h-48 bg-gray-100 rounded-2xl mb-4 overflow-hidden">
-                    <img src="Personalizada.png" class="w-full h-full object-cover" alt="Diseño Propio">
+                    <img src="Personalizada.png" class="w-full h-full object-cover zoom-img">
                 </div>
                 <p class="font-bold text-sm text-center">Diseño de Autor</p>
-            </div>
+            </a>
 
-            <div class="bg-white p-4 rounded-[2rem] card-shadow" data-aos="fade-up" data-aos-delay="200">
+            <a href="Nombre.png" class="glightbox bg-white p-4 rounded-[2rem] card-shadow block overflow-hidden" data-aos="fade-up" data-aos-delay="200">
                 <div class="h-48 bg-gray-100 rounded-2xl mb-4 overflow-hidden">
-                    <img src="Nombre.png" class="w-full h-full object-cover" alt="Taza con Nombre">
+                    <img src="Nombre.png" class="w-full h-full object-cover zoom-img">
                 </div>
                 <p class="font-bold text-sm text-center">Personalizada</p>
-            </div>
+            </a>
+
         </div>
 
-
         <h2 class="category-title text-2xl font-bold mt-20 mb-8 text-[#2d241e] border-pink-400" data-aos="fade-right">Para Parejas ❤️</h2>
-        
         <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
-            <div class="bg-white p-4 rounded-[2rem] card-shadow" data-aos="fade-up">
+            <a href="parejas1.png" class="glightbox bg-white p-4 rounded-[2rem] card-shadow block overflow-hidden" data-aos="fade-up">
                 <div class="h-48 bg-gray-100 rounded-2xl mb-4 overflow-hidden">
-                    <img src="parejas1.png" class="w-full h-full object-cover" alt="Set Parejas">
+                    <img src="parejas1.png" class="w-full h-full object-cover zoom-img">
                 </div>
-                <p class="font-bold text-sm text-center">Set "Siempre Juntos"</p>
-            </div>
-
-            <div class="bg-white p-4 rounded-[2rem] card-shadow" data-aos="fade-up" data-aos-delay="100">
+                <p class="font-bold text-sm text-center">Set Especial</p>
+            </a>
+        </div>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+            <a href="parejas2.png" class="glightbox bg-white p-4 rounded-[2rem] card-shadow block overflow-hidden" data-aos="fade-up">
                 <div class="h-48 bg-gray-100 rounded-2xl mb-4 overflow-hidden">
-                    <img src="parejas2.png" class="w-full h-full object-cover" alt="Aniversario">
+                    <img src="parejas2.png" class="w-full h-full object-cover zoom-img">
                 </div>
-                <p class="font-bold text-sm text-center">Diseño Aniversario</p>
-            </div>
-            
-            </div>
-
+                <p class="font-bold text-sm text-center">Set Especial</p>
+            </a>
+        </div>
     </main>
 
-    <footer class="bg-white py-12 border-t border-gray-100 text-center">
-        <p class="text-xs text-gray-400 uppercase tracking-widest">DaiN Tazas Personalizadas - 2024</p>
-    </footer>
-
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/glightbox/3.2.0/js/glightbox.min.js"></script>
     <script>
         AOS.init({ duration: 800, once: true });
+        // Inicializar el zoom de las fotos
+        const lightbox = GLightbox({ selector: '.glightbox' });
     </script>
 </body>
 </html>
